@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio & Bukti Belajar Matematika Informatika</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts & Font Awesome Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Background Decorative Glows -->
+    <div class="bg-glow glow-1"></div>
+    <div class="bg-glow glow-2"></div>
+
+    <!-- Navigasi -->
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fa-solid fa-square-root-variable icon-logo"></i>
+            <span>Math<strong>Lab</strong></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#biodata"><i class="fa-regular fa-user"></i> Biodata</a></li>
+            <li><a href="#bukti-belajar"><i class="fa-solid fa-brain"></i> Bukti Belajar</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-layout">
+
+        <!-- Section Biodata -->
+        <section id="biodata" class="container">
+            <div class="profile-card">
+                <div class="profile-header">
+                    <div class="avatar">
+                        <i class="fa-solid fa-user-graduate"></i>
+                    </div>
+                    <div>
+                        <h2>Biodata Mahasiswa</h2>
+                        <p class="badge-status">Sistem Informasi • Reguler 1</p>
+                    </div>
+                </div>
+                <div class="bio-grid">
+                    <div class="bio-item">
+                        <span class="bio-label"><i class="fa-solid fa-id-card"></i> Nama Lengkap</span>
+                        <span class="bio-value">Iqbal Fauzan Maulana</span>
+                    </div>
+                    <div class="bio-item">
+                        <span class="bio-label"><i class="fa-solid fa-hashtag"></i> NIM</span>
+                        <span class="bio-value">[262505018]</span>
+                    </div>
+                    <div class="bio-item">
+                        <span class="bio-label"><i class="fa-solid fa-university"></i> Universitas</span>
+                        <span class="bio-value">Universitas Ma'soem</span>
+                    </div>
+                    <div class="bio-item">
+                        <span class="bio-label"><i class="fa-solid fa-book-bookmark"></i> Mata Kuliah</span>
+                        <span class="bio-value">Matematika Informatika</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Bukti Belajar -->
+        <section id="bukti-belajar" class="container">
+            <div class="section-header">
+                <span class="subtitle-tag">UTS PROJECT CHALLENGE</span>
+                <h1>Bukti Belajar</h1>
+                <p class="hero-subtitle">Perjalanan belajar Matematika Informatika bersama Pa Iin TA 20261</p>
+            </div>
+
+            <div class="grid-calculators">
+
+                <!-- LEVEL 1: Modulo Calculator -->
+                <div class="calc-card">
+                    <div class="card-badge">Level 1</div>
+                    <div class="calc-header">
+                        <div class="calc-icon"><i class="fa-solid fa-percent"></i></div>
+                        <div>
+                            <h2>Modulo Calculator</h2>
+                            <p>Sisa hasil pembagian bilangan bulat</p>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label for="mod-a">Bilangan Bulat (a)</label>
+                        <input type="number" id="mod-a" placeholder="Contoh: 17">
+                    </div>
+                    <div class="input-group">
+                        <label for="mod-m">Modulus (m)</label>
+                        <input type="number" id="mod-m" placeholder="Contoh: 5 (m > 0)">
+                    </div>
+                    <button onclick="calculateModulo()" class="btn-calc">
+                        <span>Hitung Modulo</span> <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                    <div id="mod-result" class="result-box"></div>
+                </div>
+
+                <!-- LEVEL 2: Congruence Checker -->
+                <div class="calc-card">
+                    <div class="card-badge">Level 2</div>
+                    <div class="calc-header">
+                        <div class="calc-icon"><i class="fa-solid fa-equals"></i></div>
+                        <div>
+                            <h2>Congruence Checker</h2>
+                            <p>Uji keterbagian m terhadap (a - b)</p>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label for="cong-a">Bilangan (a)</label>
+                        <input type="number" id="cong-a" placeholder="Contoh: 17">
+                    </div>
+                    <div class="input-group">
+                        <label for="cong-b">Bilangan (b)</label>
+                        <input type="number" id="cong-b" placeholder="Contoh: 2">
+                    </div>
+                    <div class="input-group">
+                        <label for="cong-m">Modulus (m)</label>
+                        <input type="number" id="cong-m" placeholder="Contoh: 5 (m > 0)">
+                    </div>
+                    <button onclick="checkCongruence()" class="btn-calc">
+                        <span>Periksa Kongruensi</span> <i class="fa-solid fa-shield-halved"></i>
+                    </button>
+                    <div id="cong-result" class="result-box"></div>
+                </div>
+
+                <!-- LEVEL 5: Number System Calculator -->
+                <div class="calc-card">
+                    <div class="card-badge">Level 5</div>
+                    <div class="calc-header">
+                        <div class="calc-icon"><i class="fa-solid fa-binary"></i></div>
+                        <div>
+                            <h2>Number System</h2>
+                            <p>Konversi basis 2, 8, 10, dan 16</p>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label for="num-input">Input Bilangan</label>
+                        <input type="text" id="num-input" placeholder="Contoh: 1010">
+                    </div>
+                    <div class="input-group">
+                        <label for="base-select">Basis Asal</label>
+                        <select id="base-select">
+                            <option value="2">Biner (Basis 2)</option>
+                            <option value="10" selected>Desimal (Basis 10)</option>
+                            <option value="8">Oktal (Basis 8)</option>
+                            <option value="16">Heksadesimal (Basis 16)</option>
+                        </select>
+                    </div>
+                    <button onclick="convertNumberSystem()" class="btn-calc">
+                        <span>Konversi System</span> <i class="fa-solid fa-right-left"></i>
+                    </button>
+                    <div id="num-result" class="result-box"></div>
+                </div>
+
+                <!-- LEVEL 6: Combinatorics Calculator -->
+                <div class="calc-card">
+                    <div class="card-badge highlight">Level 6</div>
+                    <div class="calc-header">
+                        <div class="calc-icon"><i class="fa-solid fa-calculator"></i></div>
+                        <div>
+                            <h2>Combinatorics</h2>
+                            <p>Kalkulasi Permutasi & Kombinasi</p>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label for="comb-n">Jumlah Total (n)</label>
+                        <input type="number" id="comb-n" placeholder="Contoh: 5 (n >= 0)">
+                    </div>
+                    <div class="input-group">
+                        <label for="comb-r">Jumlah Pilihan (r)</label>
+                        <input type="number" id="comb-r" placeholder="Contoh: 3 (0 <= r <= n)">
+                    </div>
+                    <button onclick="calculateCombinatorics()" class="btn-calc">
+                        <span>Hitung P(n,r) & C(n,r)</span> <i class="fa-solid fa-chart-pie"></i>
+                    </button>
+                    <div id="comb-result" class="result-box"></div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 Math Portfolio | <strong>Universitas Ma'soem</strong></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
